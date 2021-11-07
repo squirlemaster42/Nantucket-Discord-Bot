@@ -64,6 +64,8 @@ class Basic(commands.Cog):
 
             if x == 'BOT' and (message.author.display_name != message.guild.me.display_name):
                 await message.channel.send('Beep boop')
+            if (x == 'DOMINIC' or x == 'DOM') and (message.author.display_name != message.guild.me.display_name):
+                await message.channel.send('\'Ello ' + message.authoer.display_name)
 
 
     def helpEmbed(self):
