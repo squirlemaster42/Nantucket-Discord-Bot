@@ -182,6 +182,9 @@ class Basic(commands.Cog):
         await ctx.send('I commend the effort.  Here is your reward: a wrestling match video circa 2013, as well exclusive interviews at the end.')
         await ctx.send('https://www.youtube.com/watch?v=LOuc0RDR97I&t=1s')
 
+    @commands.command()
+    async def hiDom(self, ctx):
+        await ctx.send('Grandma\'s sucking eggs again')
 
 def setup(client):
     client.add_cog(Basic(client))
