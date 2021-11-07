@@ -47,9 +47,9 @@ class Basic(commands.Cog):
                                 time.localtime(self.processID.create_time()))
         os.system('clear')
         channels = self.getBotStat()
-        for channel in channels:
-            await channel.send(f'I have arrived with version {self.version} loaded')
-            await channel.send(f'Boot time:{self.up}')
+        #for channel in channels:
+            #await channel.send(f'I have arrived with version {self.version} loaded')
+            #await channel.send(f'Boot time:{self.up}')
 
     @commands.Cog.listener()
     async def on_message(self, message):
@@ -65,7 +65,7 @@ class Basic(commands.Cog):
             if x == 'BOT' and (message.author.display_name != message.guild.me.display_name):
                 await message.channel.send('Beep boop')
             if (x == 'DOMINIC' or x == 'DOM') and (message.author.display_name != message.guild.me.display_name):
-                await message.channel.send('\'Ello ' + message.authoer.display_name)
+                await message.channel.send('\'Ello ' + message.author.display_name.split(' ')[0])
 
 
     def helpEmbed(self):
