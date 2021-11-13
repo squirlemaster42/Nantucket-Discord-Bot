@@ -130,3 +130,7 @@ dmypy.json
 
 # Discord Bot token
 token.txt
+
+# Google credentials
+credentials.json
+token.json
