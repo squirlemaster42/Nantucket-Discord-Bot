@@ -1,3 +1,4 @@
+from __future__ import print_function
 import discord
 import random
 from discord.ext import commands
@@ -11,7 +12,25 @@ import random
 import csv
 from csv import writer
 import os.path
+from googleapiclient.discovery import build
+from google_auth_oauthlib.flow import InstalledAppFlow
+from google.auth.transport.requests import Request
+from google.oauth2.credentials import Credentials
+from oauth2client.service_account import ServiceAccountCredentials
+import gspread
 
+# spreadsheet ID: "14wQx1PZWiIk2870zU5n0zXruo4ZD3KJXBFx8MObPZJo"
+
+scope = ["https://spreadsheets.google.com/feeds",'https://www.googleapis.com/auth/spreadsheets',"https://www.googleapis.com/auth/drive.file","https://www.googleapis.com/auth/drive"]
+
+creds = None
+if os.path.exists('token.json'):
+    creds = Credentials.from_authorized_user_file('token.json', scope)
+service = build('sheets', 'v4', credentials=creds)
+sheet = service.spreadsheets()
+result = sheet.values().get(spreadsheetId="14wQx1PZWiIk2870zU5n0zXruo4ZD3KJXBFx8MObPZJo", range='Sheet1!A1:Z54').execute() # do i need the range??
+values = result.get('values', [])
+print(values)
 
 class Reservations(commands.Cog):
 
