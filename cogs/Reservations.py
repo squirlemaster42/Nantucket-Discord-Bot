@@ -28,9 +28,10 @@ if os.path.exists('token.json'):
     creds = Credentials.from_authorized_user_file('token.json', scope)
 service = build('sheets', 'v4', credentials=creds)
 sheet = service.spreadsheets()
-result = sheet.values().get(spreadsheetId="14wQx1PZWiIk2870zU5n0zXruo4ZD3KJXBFx8MObPZJo", range='Sheet1!A1:Z54').execute() # do i need the range??
-values = result.get('values', [])
-print(values)
+#result = sheet.values().get(spreadsheetId="14wQx1PZWiIk2870zU5n0zXruo4ZD3KJXBFx8MObPZJo", range='Sheet1!A1:Z54').execute() # do i need the range??
+
+body = { 'values': ['test'] }
+result2 = sheet.values().update(spreadsheetId="14wQx1PZWiIk2870zU5n0zXruo4ZD3KJXBFx8MObPZJo", range='Sheet1!B4', valueInputOption="RAW", body=body).execute()
 
 class Reservations(commands.Cog):
 
