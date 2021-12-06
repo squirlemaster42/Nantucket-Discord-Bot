@@ -53,9 +53,57 @@ class Basic(commands.Cog):
 
     @commands.Cog.listener()
     async def on_message(self, message):
+        desmondQuestion = random.random()
+        if desmondQuestion < 0.05:
+            await message.channel.send('Why isn\'t Desmond in this server?')
         # if you want a stdout record of messages uncomment this
         #print(
         #    f"{message.channel}: {message.author}: {message.author.name}: {message.content}")
+        if message.author.id == 117379258606813190:
+            await message.channel.send('Shut the fuck up Forrest.')
+        if message.author.id == 189210165155856384:
+            await message.channel.send('Go take a shower Sam. Stinky.')
+        if message.author.id == 592047866592362517:
+            await message.channel.send('Delaney.')
+            await message.channel.send('Delaney.')
+            await message.channel.send('Delaney.')
+            await message.channel.send('Delaney.')
+            await message.channel.send('Hi.')
+        if message.author.id == 571325175841161247:
+            await message.channel.send('Masa you are a legend.')
+        if message.author.id == 247539199937478666:
+            await message.channel.send('Hi Bwaise!')
+        if message.author.id == 326823021081788416:
+            await message.channel.send('https://www.youtube.com/watch?v=GK2GUxOnjDQ')
+        if message.author.id == 314198862560493569:
+            await message.channel.send('https://www.youtube.com/watch?v=2WaDvi11hmA')
+        if message.author.id == 409855271066796033:
+            await message.channel.send('Garrett your new IQP is Pikmin 4.')
+        if message.author.id == 540277525511667723:
+            await message.channel.send('Bane of Arthropods is the only good sword enchantment.')
+        if message.author.id == 171769768276262912:
+            await message.channel.send('Jakob, I, Dominic Golding, have always envied your incredible beard')
+        if message.author.id == 174994662153519105:
+            await message.channel.send('Overwatch is dead.')
+        if message.author.id == 689113642276356136:
+            await message.channel.send('Jazz is dead.')
+        if message.author.id == 368482797263781899:
+            await message.channel.send('Go eat cold pasta Tony.')
+        if message.author.id == 606668276029980673:
+            await message.channel.send('Hi Alicia.')
+        if message.author.id == 824295193074204683:
+            await message.channel.send('Hi Abby.')
+        if message.author.id == 813793810433048596:
+            await message.channel.send('Iris you have elite music taste.')
+        if message.author.id == 826545442124201994:
+            await message.channel.send('Jane I cannot believe you actually typed in the Discord.')
+        if message.author.id == 509535927832674315:
+            await message.channel.send('Honey has no place in tomato sauce.')
+        if message.author.id == 231623681770520577:
+            await message.channel.send('Funny guy. Right here. Real funny.')
+        if message.author.id == 671901829134680064:
+            await message.channel.send('\'Ell Govna.')
+
         text = []
         for str in message.content.upper().split():
             text.append(str.translate(
@@ -68,16 +116,6 @@ class Basic(commands.Cog):
                 await message.channel.send('\'Ello ' + message.author.display_name.split(' ')[0])
             if (x == 'IQP') and (message.author.display_name != message.guild.me.display_name):
                 await message.channel.send('IQP is a key and essential part to your engineering education.')
-            if message.author.id == 117379258606813190:
-                await message.channel.send('Shut the fuck up Forrest.')
-            if message.author.id == 189210165155856384:
-                await message.channel.send('Go take a shower Sam. Stinky.')
-            if message.author.id == 592047866592362517:
-                await message.channel.send('Delaney.')
-                await message.channel.send('Delaney.')
-                await message.channel.send('Delaney.')
-                await message.channel.send('Delaney.')
-                await message.channel.send('Hi.')
 
 
     def helpEmbed(self):
