@@ -68,6 +68,8 @@ class Basic(commands.Cog):
                 await message.channel.send('\'Ello ' + message.author.display_name.split(' ')[0])
             if (x == 'IQP') and (message.author.display_name != message.guild.me.display_name):
                 await message.channel.send('IQP is a key and essential part to your engineering education.')
+            if message.author.display_name == "Forrest [NEO]":
+                await message.channel.send('Shut the fuck up Forrest.')
 
 
     def helpEmbed(self):
