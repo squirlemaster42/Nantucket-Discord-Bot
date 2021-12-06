@@ -60,7 +60,7 @@ class Basic(commands.Cog):
         #print(
         #    f"{message.channel}: {message.author}: {message.author.name}: {message.content}")
         if message.author.id == 117379258606813190:
-            await message.channel.send('Shut the fuck up Forrest.')
+            await message.channel.send('Objectively, a dub.')
         if message.author.id == 189210165155856384:
             await message.channel.send('Go take a shower Sam. Stinky.')
         if message.author.id == 592047866592362517:
