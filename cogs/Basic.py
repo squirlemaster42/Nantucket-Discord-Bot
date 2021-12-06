@@ -68,8 +68,16 @@ class Basic(commands.Cog):
                 await message.channel.send('\'Ello ' + message.author.display_name.split(' ')[0])
             if (x == 'IQP') and (message.author.display_name != message.guild.me.display_name):
                 await message.channel.send('IQP is a key and essential part to your engineering education.')
-            if message.author.display_name == "Forrest [NEO]":
+            if message.author.id == 117379258606813190:
                 await message.channel.send('Shut the fuck up Forrest.')
+            if message.author.id == 189210165155856384:
+                await message.channel.send('Go take a shower Sam. Stinky.')
+            if message.author.id == 592047866592362517:
+                await message.channel.send('Delaney.')
+                await message.channel.send('Delaney.')
+                await message.channel.send('Delaney.')
+                await message.channel.send('Delaney.')
+                await message.channel.send('Hi.')
 
 
     def helpEmbed(self):
